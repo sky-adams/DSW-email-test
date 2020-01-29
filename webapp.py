@@ -1,7 +1,6 @@
 import os
 from flask import Flask, url_for, render_template, request, redirect
 from flask_mail import Mail, Message
-from app import mail
 from flask_mail import Message
 
 app = Flask(__name__)
