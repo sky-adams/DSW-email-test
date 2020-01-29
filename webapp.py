@@ -20,6 +20,7 @@ def renderMain():
         msg.body = request.form['message']
         msg.html = '<p>This is a test email!</p>'
         mail.send(msg)
+        print('got here')
     return render_template('home.html')
     
 if __name__=="__main__":
