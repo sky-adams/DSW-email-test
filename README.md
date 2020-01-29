@@ -1,3 +1,5 @@
 # DSW-email-test
+SendGrid version:
 Emails to my personal email arrived.  Emails to my work email did not, even though SendGrid Activity shows that they were delivered.
 .env file is in local repo.
+
