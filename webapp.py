@@ -17,8 +17,8 @@ mail = Mail(app)
 def renderMain():
     if request.method == 'POST' and 'message' in request.form and 'recipient' in request.form:
         msg = Message('Twilio SendGrid Test Email', recipients=[request.form['recipient']])
-        msg.body = request.form['message']
-        msg.html = '<p>This is a test email!</p>'
+        #msg.body = request.form['message']
+        msg.html = request.form['message']
         mail.send(msg)
         print('got here')
     return render_template('home.html')
