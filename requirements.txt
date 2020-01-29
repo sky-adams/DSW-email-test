@@ -20,3 +20,4 @@ Werkzeug
 wheel
 WTForms
 python-dotenv
+flask_mail
