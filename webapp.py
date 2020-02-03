@@ -5,7 +5,7 @@ from flask_mail import Message
 
 app = Flask(__name__)
 
-"""
+
 app.config['SECRET_KEY'] = os.environ['SECRET_KEY']
 app.config['MAIL_SERVER'] = 'smtp.sendgrid.net'
 app.config['MAIL_PORT'] = 587
@@ -14,8 +14,8 @@ app.config['MAIL_USERNAME'] = 'apikey'
 app.config['MAIL_PASSWORD'] = os.environ['SENDGRID_API_KEY']
 app.config['MAIL_DEFAULT_SENDER'] = os.environ['MAIL_DEFAULT_SENDER']
 mail = Mail(app)
-"""
 
+"""
 mail_settings = {
     "MAIL_SERVER": os.environ['MAIL_SERVER'],
     "MAIL_PORT": 587,
@@ -26,6 +26,7 @@ mail_settings = {
 
 app.config.update(mail_settings)
 mail = Mail(app)
+"""
 
 @app.route('/', methods=['GET', 'POST'])
 def renderMain():
