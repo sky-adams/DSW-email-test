@@ -31,16 +31,18 @@ mail = Mail(app)
 @app.route('/', methods=['GET', 'POST'])
 def renderMain():
     if request.method == 'POST' and 'message' in request.form and 'recipient' in request.form:
-        """
+        
         msg = Message('Twilio SendGrid Test Email', recipients=[request.form['recipient']])
         #msg.body = request.form['message']
         msg.html = request.form['message']
         mail.send(msg)
+        
         """
         msg = Message('Flask-Mail test email', recipients=[request.form['recipient']])
         #msg.body = request.form['message']
         msg.html = request.form['message']
         mail.send(msg)
+        """
         print('got here')
     return render_template('home.html')
     
